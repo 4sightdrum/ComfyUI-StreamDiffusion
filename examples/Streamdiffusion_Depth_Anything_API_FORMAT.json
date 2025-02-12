@@ -1,4 +1,9 @@
-{
+docker run -it -p 7860:7860 --platform=linux/amd64 --gpus all \
+    -e HF_HOME="/data/.huggingface" \
+    -e USE_TAESD="True" \
+    -e PIPELINE="controlnetSDTurbo" \
+    -e COMPILE="--sfast" \
+    registry.hf.space/4sightdrum-real-time-sd-turbo:gpu-71f2619{
   "27": {
     "inputs": {
       "image": "chillguy.png",
